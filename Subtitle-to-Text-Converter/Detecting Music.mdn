@@ -1,0 +1,4 @@
+Twilight 1
+Encoding: utf8,
+Music: <i>? That's when I'll come home ?</i>
+Regex: new RegExp('?');  // At first I tried to catch both musical notes but whenever there was an apostrophe in the sentence, it didn't work...

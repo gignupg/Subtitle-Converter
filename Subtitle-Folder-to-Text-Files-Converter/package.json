@@ -1,0 +1,24 @@
+{
+  "name": "subtitle-to-audacity-label-converter",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "convert-subtitle-folder-to-text-files.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gignupg/subtitle-to-audacity-label-converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gignupg/subtitle-to-audacity-label-converter/issues"
+  },
+  "homepage": "https://github.com/gignupg/subtitle-to-audacity-label-converter#readme",
+  "dependencies": {
+    "detect-character-encoding": "^0.8.0",
+    "subtitle": "^4.0.1"
+  }
+}
