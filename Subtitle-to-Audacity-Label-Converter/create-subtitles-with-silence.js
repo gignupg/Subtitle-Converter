@@ -50,7 +50,18 @@ fs.readdir(downloadDir, function (err, files) {
                         count++;
 
                         if (silence >= 10) {
-                            let silenceIndicator = `${count}\n${formatTimestamp(prevEnd)} --> ${start}\nSilence (${silence})\n\n`;
+                            let silenceStart = prevEnd;
+                            let silenceEnd = prevEnd + 1000;
+
+                            let silenceIndicator = `${count}\n${formatTimestamp(silenceStart)} --> ${formatTimestamp(silenceEnd)}\nSilence (${silence})\n\n`;
+
+                            for (let i = silence - 1; i > 0; i--) {
+                                count++;
+                                silenceStart += 1000;
+                                silenceEnd += 1000;
+
+                                silenceIndicator += `${count}\n${formatTimestamp(silenceStart)} --> ${formatTimestamp(silenceEnd)}\nSilence (${i})\n\n`;
+                            }
 
                             count++;
                             prevEnd = elem.end;
